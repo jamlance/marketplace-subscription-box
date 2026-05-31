@@ -1,0 +1,49 @@
+@import "@inkress/apps-core/styles.css";
+
+/* Subscription Boxes — plan cards + subscriber management. */
+
+.sb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.sb-card { padding: 16px; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); box-shadow: var(--e1); display: flex; flex-direction: column; gap: 8px; }
+.sb-card.is-off { opacity: 0.72; }
+.sb-card-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.sb-blurb { font-size: 0.8125rem; }
+.sb-price { font-size: 1.35rem; font-weight: 700; }
+.sb-subs { font-size: 0.8125rem; }
+.sb-link { display: flex; gap: 6px; }
+.sb-link-input { font-size: 0.72rem; height: 32px; color: var(--ink-soft); }
+.sb-actions { display: flex; gap: 6px; align-items: center; margin-top: 2px; }
+.sb-open { display: inline-grid; place-items: center; width: 30px; height: 30px; border: 1px solid var(--line-strong); border-radius: 7px; color: var(--ink-soft); }
+.sb-open:hover { background: var(--panel); }
+.sb-note { display: flex; align-items: center; gap: 8px; margin-top: 14px; }
+.sb-row-actions { display: flex; gap: 6px; justify-content: flex-end; flex-wrap: wrap; }
+
+.sb-form { display: flex; flex-direction: column; gap: 12px; }
+.sb-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.sb-field { display: flex; flex-direction: column; gap: 5px; }
+.sb-check { display: flex; align-items: center; gap: 8px; font-size: 0.8125rem; color: var(--ink-soft); }
+.sb-check input { width: auto; height: auto; }
+
+/* card visuals */
+.sb-card { padding: 0; overflow: hidden; --ac: #0a7d54; }
+.sb-card-body { padding: 16px; display: flex; flex-direction: column; gap: 8px; }
+.sb-hero { display: block; height: 110px; background-size: cover; background-position: center; }
+.sb-stripe { display: block; height: 5px; background: var(--ac); }
+.sb-intro { font-size: 0.72rem; margin-left: 8px; padding: 2px 7px; border-radius: 20px; background: var(--panel); color: var(--ac); font-weight: 600; }
+.sb-contents { font-size: 0.78rem; }
+
+/* form: contents + product picker */
+.sb-field-color input[type="color"] { width: 56px; height: 38px; padding: 2px; border-radius: 8px; cursor: pointer; }
+.sb-contents-edit { display: flex; flex-direction: column; gap: 5px; }
+.sb-content-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 6px 10px; background: var(--panel); border-radius: 8px; font-size: 0.86rem; }
+.sb-content-add { display: flex; gap: 6px; }
+.sb-content-add input { flex: 1; }
+.sb-ac { position: relative; }
+.sb-ac-results { position: absolute; z-index: 30; top: calc(100% + 3px); left: 0; right: 0; background: var(--card, #fff); border: 1px solid var(--line); border-radius: 10px; box-shadow: 0 12px 32px rgba(20,30,60,.16); max-height: 220px; overflow: auto; }
+.sb-ac-row { display: flex; align-items: center; gap: 8px; padding: 9px 12px; cursor: pointer; font-size: 0.88rem; }
+.sb-ac-row:hover { background: var(--panel); }
+.sb-ac-row strong { flex: 1; font-weight: 600; }
+.sb-ac-thumb { width: 26px; height: 26px; border-radius: 6px; background-size: cover; background-position: center; background-color: var(--panel); flex: 0 0 auto; }
+
+/* subscriber toolbar */
+.sb-toolbar { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.sb-search { min-width: 150px; }
